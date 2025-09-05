@@ -1,0 +1,17 @@
+[package]
+name = "pod2_blob_example"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+alloy = { version = "1.0.13", features = [
+    "eips",
+    "full",
+    "json-rpc",
+    "rpc-client",
+] }
+tokio = {version="1.45", features = ["rt-multi-thread", "macros"]}
+
+anyhow = "1.0.56"
+pod2 = { git="https://github.com/0xPARC/pod2", rev = "78b49f2437bc6e00be2c371cbf7ac5218792d4d0" }
+pod2_onchain = { git = "https://github.com/0xPARC/pod2-onchain.git", rev = "0fa4ab2b4a462b70f2ef284a8a562ea2364d9563" }
